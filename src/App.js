@@ -15,7 +15,6 @@ import { PickerProfile } from './components/Profile/PickerProfile';
 import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 
 function App() {
-
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
   useEffect(() => { //Estado del servidor
     auth.onAuthStateChanged((user) => { //user del servidor
@@ -26,8 +25,8 @@ function App() {
       }
     })
   }, [])
-  
-  return (
+
+  return(
     <>
     {user !== null ? (
     <Router>
