@@ -22,7 +22,7 @@ export const PickerCancel = () =>{
         <>
             <Navbar />
             <div className="cancelContainer">
-                <h2 className="titleCancel">¿Por qué estás cancelando la entrega?</h2>
+                <p className="titleCancel">¿Por qué estás cancelando la entrega?</p>
                 <div className="buttonCancel">
                     <div className="prueba">
                         <button className="firstButton">La tienda no lo tiene en existencia</button>
@@ -30,7 +30,7 @@ export const PickerCancel = () =>{
                         <button className="thirdButton">Otro</button>
                         <p>Comentario:</p>
                         <textarea type="text" value={commit} onChange={(e) => { setCommit(e.target.value)}} placeholder="Coloca tus comentarios aquí....."></textarea>
-                        <button className="enviar" onClick={commitCancelation}>ENVIAR CANCELACIÓN</button>
+                        <button className="enviar" onClick={commitCancelation}>Enviar Cancelación</button>
                     </div>
                 </div>
             </div>
