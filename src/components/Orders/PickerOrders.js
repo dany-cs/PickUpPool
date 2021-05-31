@@ -25,7 +25,11 @@ function PickerOrders() {
             </div>
         </>
     );
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e43192d (cambios de estilos varios)
 }
 
 export default PickerOrders;
