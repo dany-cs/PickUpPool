@@ -11,14 +11,14 @@ function OneOrder() {
     function handleClick() {
         history.push('/details');
     }
-
+    
     useEffect(() => {
-        const getNotes = async () => {
+        const getOrders = async () => {
             const { docs } = await collectionOrders()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
             setCreate(newArray)
         }
-        getNotes()
+        getOrders()
     }, []);
 
     const orderId = async (id) => {
@@ -30,7 +30,6 @@ function OneOrder() {
         }
         
     }
-
     return (
         <>
             <div onClick={handleClick} className="ordersDad">
