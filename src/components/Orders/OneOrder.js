@@ -1,37 +1,37 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { collectionOrders } from '../../firebase'
 import './UserOrders.css'
 import { useHistory } from 'react-router-dom'
 
 function OneOrder() {
+    const [createN, setCreate] = useState([]);
+    const [selectedOrder, setSelectedOrder] = useState(null);
     let history = useHistory();
 
     function handleClick() {
         history.push('/details');
     }
-    const [createN, setCreate] = useState([]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const getNotes = async () => {
             const { docs } = await collectionOrders()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
             setCreate(newArray)
         }
         getNotes()
-    }, [])
+    }, []);
 
     return (
         <>
-            <div onClick={handleClick} className="ordersDad">
+            <div onClick={handleClick} order={selectedOrder} className="ordersDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
                         
                         <span className="ordersBoy" key={item.id}>
                             <p>Id: {item.numOrden}</p>
-                            <p>Tamaño: {item.tamaño}</p>
-                        </span>
-                                    
+                            <p>Fecha de entrega: {item.entrega}</p>
+                        </span>     
                     ))
                     ) : (
                         <span>No existen ordenes</span>

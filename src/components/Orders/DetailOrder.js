@@ -3,14 +3,14 @@ import Navbar from '../Navbar/Navbar'
 import { useHistory } from 'react-router-dom'
 import OneOrder from './OneOrder'
 
+
 const DetailOrder =()=>{
     
     let history = useHistory();
 
     function handleClick() {
-        history.push('/orders');        
+        history.push('/pickerProfile');        
     }
-
     return(
         <div className='viewPrincipal'>
             <Navbar/>
@@ -67,7 +67,7 @@ const DetailOrder =()=>{
                             </select>
                         </div>
                         <div className='confirm'>
-                            <button>Confirmar Pickeo</button>
+                            <button onClick={handleClick}>Confirmar Pickeo</button>
                         </div>
                     </div>
                 </section>
