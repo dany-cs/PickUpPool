@@ -36,6 +36,9 @@ const DetailOrder =()=>{
         }
     };
 
+    const queryParams = new URLSearchParams(window.location.search);
+    const id = queryParams.get('id');
+
 
 
     return(
@@ -45,6 +48,7 @@ const DetailOrder =()=>{
             <div className='conteiner-userorders'>
                 <div className="my-orders">
                     <p>Mis pedidos</p>
+                    <p>Id: {id}</p>
                 </div>
                 <section> 
                     <form className="container-orders" onSubmit={scheduleOrder}>

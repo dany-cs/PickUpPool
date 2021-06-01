@@ -16,7 +16,6 @@ import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 import OrderTracking from './components/OrderTracking/OrderTracking'
 
 function App() {
-
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
   useEffect(() => { //Estado del servidor
     auth.onAuthStateChanged((user) => { //user del servidor
