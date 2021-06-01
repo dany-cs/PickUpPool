@@ -1,25 +1,32 @@
 import React, { useState} from 'react';
 import { db } from '../../firebase';
 import './RegisterPicker.css'
+import swal from 'sweetalert';
+import { useHistory } from 'react-router-dom'
+
 
 export const RegisterPicker = (props) => {
+
+    let history = useHistory();
 
     const[name, setName] = useState('');
     const[ine, setIne] = useState('');
     const[placas, setPlacas] = useState('');
     const[phone, setPhone] = useState('');
-
+    // console.log(props.user.uid);
+    
     const registerPick = async (e) =>{
-        e.prevetDefault();
+        e.preventDefault();
         const newPicker = {
             name : name,
             ine: ine,
             placas: placas,
             phone: phone, 
-            commit: ''
         };
         try{
             await db.collection('pickerInformation').add(newPicker);
+            swal('¡Tu registro se ha realizado de manera exitosa!','¡Nuevo picker!', 'success');
+            history.push('/pickerProfile');
             console.log('Datos guardados exitosamente');
         }
         catch(error){

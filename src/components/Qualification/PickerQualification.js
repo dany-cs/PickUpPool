@@ -8,7 +8,7 @@ const PickerQualification =()=>{
         <>
             <Navbar />
             <div className='review'>
-                <h2>Califica tu servicio</h2>
+                <p className='reviewP'>Califica tu servicio</p>
                 <div className="container-review">
                     <div>
                         <p>Puntualidad</p>
@@ -22,8 +22,8 @@ const PickerQualification =()=>{
                         <p>Servicio</p>
                         <Stars/>
                     </div>
-                    <div className='confirm'>
-                        <button>Enviar calificación</button>
+                    <div>
+                        <button className='confirm-review'>Enviar calificación</button>
                     </div>
                 </div>
             </div>
