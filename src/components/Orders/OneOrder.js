@@ -27,9 +27,8 @@ function OneOrder() {
             console.log(data.data())
             history.push({
                 pathname: `/details`,
-                search: `?id=${id}`
-              })
-              
+                search: `?id=${id}`,
+            })
         } catch (e){
             console.log(e,"no existen datos")
         }
@@ -52,7 +51,7 @@ function OneOrder() {
                         <span>No existen ordenes</span>
                         )
             }
-             </div> 
+            </div> 
         </>
     );
 }
