@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { collectionDeliveries } from '../../firebase'
 import './Deliveries.css';
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function Deliveries() {
-    // let history = useHistory();
+     let history = useHistory();
 
-    // function handleClick() {
-    //     history.push('/details');
-    // }
+    function handleClick() {
+       history.push('/userProfile');
+     }
     const [createN, setCreate] = useState([]);
 
     React.useEffect(() => {
@@ -22,7 +22,7 @@ function Deliveries() {
 
     return (
         <>
-            {/* <div onClick={handleClick} className="deliveriesDad"> */}
+             <div onClick={handleClick} className="deliveriesDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
@@ -40,7 +40,7 @@ function Deliveries() {
                         <span>Aún no hay nuevas entregas</span>
                         )
             }
-            {/* </div> */}
+                </div> 
         </>
     );
 }
