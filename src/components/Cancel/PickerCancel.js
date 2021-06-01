@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import { db } from '../../firebase';
 import './PickerCancel.css'
 import Navbar from '../Navbar/Navbar'
+import arrow from '../../assets/back.png';
+import { useHistory } from 'react-router-dom'
 
 export const PickerCancel = () =>{
+    let history = useHistory();
 
+    function handleClick() {
+        history.push('/userProfile');
+    }
     const[commit, setCommit] = useState('');
     const commitCancelation = async (e) =>{
         const newCancelation = {
@@ -13,6 +19,7 @@ export const PickerCancel = () =>{
         try{
             await db.collection('pickerCancelation').add(newCancelation);
             console.log('Comentario de cancelación exitoso');
+            history.push('/principal');
         }
         catch(error){
             console.log('No exitoso', error)
@@ -21,6 +28,7 @@ export const PickerCancel = () =>{
     return(
         <>
             <Navbar />
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className="cancelContainer">
                 <p className="titleCancel">¿Por qué estás cancelando la entrega?</p>
                 <div className="buttonCancel">

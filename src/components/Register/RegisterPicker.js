@@ -26,7 +26,7 @@ export const RegisterPicker = (props) => {
         try{
             await db.collection('pickerInformation').add(newPicker);
             swal('¡Tu registro se ha realizado de manera exitosa!','¡Nuevo picker!', 'success');
-            history.push('/pickerProfile');
+            history.push('/deliveries');
             console.log('Datos guardados exitosamente');
         }
         catch(error){
