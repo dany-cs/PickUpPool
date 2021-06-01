@@ -26,7 +26,7 @@ function OneOrder() {
     const orderId = async (id) => {
         try{
             const data = await db.collection('orders').doc(id).get();
-            console.log(data.data().tamaño)
+            console.log(data.data())
             history.push({
                 pathname: `/details`,
                 search: `?id=${id}`,

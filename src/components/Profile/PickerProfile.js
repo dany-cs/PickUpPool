@@ -18,8 +18,8 @@ export const PickerProfile = () =>{
 
     
 
-    const data =  db.collection('orders').doc(id).get().then(r => console.log(r.data))
-    console.log(data, "perfil")
+    // const data =  db.collection('orders').doc(id).get().then(r => console.log(r.data))
+    // console.log(data, "perfil")
 
 
     return (
