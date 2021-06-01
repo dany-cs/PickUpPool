@@ -8,9 +8,9 @@ function OneOrder() {
     // const [selectedOrder, setSelectedOrder] = useState(null);
     let history = useHistory();
 
-    function handleClick() {
-        history.push('/details');
-    }
+    // function handleClick() {
+    //     history.push('/details');
+    // }
     
     useEffect(() => {
         const getOrders = async () => {
@@ -25,6 +25,11 @@ function OneOrder() {
         try{
             const data = await db.collection('orders').doc(id).get();
             console.log(data.data())
+            history.push({
+                pathname: `/details`,
+                search: `?id=${id}`
+              })
+              
         } catch (e){
             console.log(e,"no existen datos")
         }
@@ -32,7 +37,7 @@ function OneOrder() {
     }
     return (
         <>
-            <div onClick={handleClick} className="ordersDad">
+            <div className="ordersDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
