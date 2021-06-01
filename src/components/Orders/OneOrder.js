@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react'
 import { db,collectionOrders } from '../../firebase'
 import './UserOrders.css'
 import { useHistory } from 'react-router-dom'
+import { PickerProfile } from '../Profile/PickerProfile';
 
 function OneOrder() {
     const [createN, setCreate] = useState([]);
@@ -16,6 +17,7 @@ function OneOrder() {
         const getOrders = async () => {
             const { docs } = await collectionOrders()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
+            console.log(newArray);
             setCreate(newArray)
         }
         getOrders()
@@ -24,7 +26,7 @@ function OneOrder() {
     const orderId = async (id) => {
         try{
             const data = await db.collection('orders').doc(id).get();
-            console.log(data.data())
+            console.log(data.data().tamaño)
             history.push({
                 pathname: `/details`,
                 search: `?id=${id}`,
