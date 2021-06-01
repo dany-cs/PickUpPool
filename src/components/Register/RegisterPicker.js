@@ -36,7 +36,7 @@ export const RegisterPicker = (props) => {
 
     return(
         <div className="registerPicker">
-            <h1 className='titlePicker'>REGISTRATE COMO PICKER</h1>
+            <h2 className='titlePicker'>REGISTRATE COMO PICKER</h2>
                 <div className="registerDivFormP">
                     <form className="registerPickerForm" > 
                         <label>{props.user.email}</label>
@@ -58,7 +58,7 @@ export const RegisterPicker = (props) => {
                         </div>
                         <label htmlFor="telephone">Teléfono*</label>
                         <input value={phone} onChange={(e) => {setPhone(e.target.value)}} type="number" className="registerPickerInput" />
-                        <button onClick={registerPick} value="regPicker" className="registerPickerButton" >UNIRME</button>
+                        <button onClick={registerPick} value="regPicker" className="registerPickerButton" >Unirme</button>
                     </form>
                     </div>
         </div>
