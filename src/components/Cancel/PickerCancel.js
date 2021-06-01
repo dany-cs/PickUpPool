@@ -6,11 +6,13 @@ import arrow from '../../assets/back.png';
 import { useHistory } from 'react-router-dom'
 
 export const PickerCancel = () =>{
+    
     let history = useHistory();
 
     function handleClick() {
         history.push('/userProfile');
     }
+
     const[commit, setCommit] = useState('');
     const commitCancelation = async (e) =>{
         const newCancelation = {
@@ -25,12 +27,6 @@ export const PickerCancel = () =>{
             console.log('No exitoso', error)
         }
     };
-
-    let history = useHistory();
-
-    function handleClick() {
-        history.push('/orders');
-    }
 
     return(
         <>
