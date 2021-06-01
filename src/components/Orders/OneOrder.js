@@ -1,8 +1,7 @@
 import React, {useEffect, useState } from 'react'
-import { db,collectionOrders } from '../../firebase'
+import { db, collectionOrders } from '../../firebase'
 import './UserOrders.css'
 import { useHistory } from 'react-router-dom'
-import { PickerProfile } from '../Profile/PickerProfile';
 
 function OneOrder() {
     const [createN, setCreate] = useState([]);

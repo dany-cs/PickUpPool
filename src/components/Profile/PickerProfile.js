@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom'
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {db} from '../../firebase'
+// import {db} from '../../firebase'
 import Navbar from '../Navbar/Navbar'
 import arrow from '../../assets/back.png';
 import '../Profile/PickerProfile.css'
@@ -29,7 +29,6 @@ export const PickerProfile = () =>{
         <div className="pickerProfile">
             <p>Mis pedidos</p>
             <p>{id}</p>
-            <p>{id.cliente}</p>
             <div className="profile">
 
                 <Link to="/newPicker" className="profileLink">Cambiar Picker</Link>
