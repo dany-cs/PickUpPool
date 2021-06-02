@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruckPickup } from '@fortawesome/free-solid-svg-icons'
 import { faMale } from '@fortawesome/free-solid-svg-icons'
 
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const myLatLng = {lat: 19.4368747, lng: -99.1412259};
+// const AnyReactComponent = ({ text }) => <div>{text}</div>;  
+const myLatLng = {lat: 19.429102, lng: -99.132366};
 class ViewMaps extends Component {
   static defaultProps = {
     center: myLatLng,
-    zoom: 10
+    zoom: 15
   };
   render() {
     return (
@@ -26,8 +26,8 @@ class ViewMaps extends Component {
           />
           <FontAwesomeIcon icon = {faTruckPickup}
             style ={{fontSize:"2em", color:"#F71963"}}
-            lat={19.372794328102774}
-            lng={-99.17858404330478}
+            lat={19.42197262954501}
+            lng={-99.13691287730504}
           />
         </GoogleMapReact>
       </div>
