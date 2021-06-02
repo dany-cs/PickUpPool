@@ -53,7 +53,7 @@ const DetailOrder =()=>{
                 <section> 
                     <form className="container-orders" onSubmit={scheduleOrder}>
                         <div className='hours'>
-                        <p>Id:{id}</p>
+                        <p>Guía de rastreo: {id}</p>
                             <p>Hora de entrega:</p>
                             <select value={hours} onChange={(e) => {setHours(e.target.value)}} required>
                                 <option></option>

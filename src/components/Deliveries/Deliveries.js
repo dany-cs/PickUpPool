@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { collectionDeliveries } from '../../firebase'
 import './Deliveries.css';
 import { useHistory } from 'react-router-dom'
 
 function Deliveries() {
+    const [createN, setCreate] = useState([]);
      let history = useHistory();
 
-    function handleClick() {
-       history.push('/userProfile');
-     }
-    const [createN, setCreate] = useState([]);
+    
 
-    React.useEffect(() => {
+    useEffect(() => {
         const getNotes = async () => {
             const { docs } = await collectionDeliveries()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
@@ -20,20 +18,28 @@ function Deliveries() {
         getNotes()
     }, [])
 
+    const goToOrderDetail = async (id) => {
+        history.push({
+            pathname: `/userProfile`,
+            search: `?id=${id}`,
+        })
+}
+
     return (
         <>
-             <div onClick={handleClick} className="deliveriesDad">
+             <div className="deliveriesDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
                         
-                        <span className="deliveriesBoy" key={item.id}>
+                        <li className="deliveriesBoy" key={item.id}>
                             <p>Núm de orden: {item.numOrden}</p>
                             <p>Usuario: {item.cliente}</p>
                             <p>Telefono: {item.telefono}</p>
                             <p>Fecha de entrega {item.entrega}</p>
                             <p>Ubicación: {item.ubicación}</p>
-                        </span>
+                            <button  onClick={(id)=>{goToOrderDetail(item.id)}}>detalles</button>
+                        </li>
                             
                     ))
                     ) : (
