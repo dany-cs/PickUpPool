@@ -14,7 +14,7 @@ export const UserProfile = () =>  {
     }
     
     function handleClic() {
-        history.push('/tracking');
+        history.push('/pickertracking');
     }
 
     const queryParams = new URLSearchParams(window.location.search);
