@@ -1,40 +1,80 @@
 import { useHistory } from 'react-router-dom'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
-// import {db} from '../../firebase'
 import Navbar from '../Navbar/Navbar'
 import arrow from '../../assets/back.png';
 import '../Profile/PickerProfile.css'
+import { db } from '../../firebase'
+
 
 export const PickerProfile = () =>{
     let history = useHistory();
+    const [order, setOrder] = useState()
 
     function handleClick() {
         history.push('/details');
+    }
+    function handleClic() {
+        history.push('/tracking');
     }
     
     const queryParams = new URLSearchParams(window.location.search);
     const id = queryParams.get('id');
 
-    
-
-    // const data =  db.collection('orders').doc(id).get().then(r => console.log(r.data))
-    // console.log(data, "perfil")
-
+    useEffect(() => {
+        const getOrderById = async () => {
+            try{
+                const doc = await db.collection('orders').doc(id).get();
+                setOrder( doc.data() )
+            } catch (e){
+                console.log(e,"no existen datos")
+            }
+            
+        }
+        getOrderById()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>
         <Navbar/>
         <img onClick={handleClick} src={arrow} className="return" alt="return" />
         <div className="pickerProfile">
-            <p>Mis pedidos</p>
-            <p>{id}</p>
+            <p className="title">Mis pedidos</p>
             <div className="profile">
+            {order && 
+            <p className="letter">
+                Numero de orden: {order.numOrden}.
+                <br/>
+                
+                Tienda: {order.tienda}.
+                <br/>
+                <br/>
+                Picker asignado: {order.piker}.
+                <br/>
+                Contacto Picker: {order.celPiker}
+                <br/>
+                Transporte: {order.vehiculo}
+                <br/>
+                {order.detalles}
+                <br/>
+                <br/>
+                Fecha entrega: {order.entrega}.
+                <br/>
+                Lugar de entrega: {order.places}
+                <br/>
+                Hora de entrega: {order.hours}
+                <br/> 
+            </p>
+            
+            }
+            <button to="/tracking"className="mapas" onClick={handleClic}>Rastrear paquete</button>
 
-                <Link to="/newPicker" className="profileLink">Cambiar Picker</Link>
+            <Link to="/newPicker" className="profileLink">Cambiar Picker</Link>
             </div>
             
-        </div>
+            </div>
+        
         </>
     )
 }

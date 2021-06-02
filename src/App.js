@@ -14,7 +14,8 @@ import PickerQualification from './components/Qualification/PickerQualification'
 import { PickerProfile } from './components/Profile/PickerProfile';
 import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 import OrderTracking from './components/OrderTracking/OrderTracking';
-import UserProfile from './components/Profile/UserProfile';
+import { UserProfile } from './components/Profile/UserProfile';
+
 
 
 function App() {
