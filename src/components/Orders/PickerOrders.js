@@ -12,7 +12,6 @@ function PickerOrders() {
         history.push('/principal');
     }
 
-    
     return (
         <>
             <Navbar />

@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
 }
-
 .conteiner-deliveries {
     display: flex;
     flex-direction: column;
@@ -17,20 +16,16 @@
     border-radius: 5px;
     margin-top: -9px;
 }
-
 .conteiner-pickerorders p{
     font-size: larger;
     
 }
-
-
 .deliveriesDad{
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
 .deliveriesBoy {
     display: flex;
     flex-direction: column;
@@ -43,9 +38,7 @@
     border-radius: 5px;
     margin-top: 13px;
 }
-
 .deliveriesBoy p {
     font-size: small;
     margin: 0px;
 }
-

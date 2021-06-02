@@ -9,11 +9,10 @@ const Navbar =()=>{
     function handleClickPrincipal() {
         history.push('/principal');
     }
-  
+
     function handleLogout() {
         auth.signOut().then(() => console.log("Salir"));
     }
-
 
     return(
         <div className='navbar'>

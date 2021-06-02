@@ -6,8 +6,8 @@ import arrow from '../../assets/back.png';
 import '../Profile/PickerProfile.css'
 import { db } from '../../firebase'
 
-
 export const PickerProfile = () =>{
+
     let history = useHistory();
     const [order, setOrder] = useState()
 
@@ -32,46 +32,44 @@ export const PickerProfile = () =>{
             
         }
         getOrderById()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <>
-        <Navbar/>
-        <img onClick={handleClick} src={arrow} className="return" alt="return" />
-        <div className="pickerProfile">
-            <p className="title">Mis pedidos</p>
-            <div className="profile">
-            {order && 
-            <p className="letter">
-                Numero de orden: {order.numOrden}.
-                <br/>
-                
-                Tienda: {order.tienda}.
-                <br/>
-                <br/>
-                Picker asignado: {order.piker}.
-                <br/>
-                Contacto Picker: {order.celPiker}
-                <br/>
-                Transporte: {order.vehiculo}
-                <br/>
-                {order.detalles}
-                <br/>
-                <br/>
-                Fecha entrega: {order.entrega}.
-                <br/>
-                Lugar de entrega: {order.places}
-                <br/>
-                Hora de entrega: {order.hours}
-                <br/> 
-            </p>
+            <Navbar/>
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />
+            <div className="pickerProfile">
+                <p className="title">Mis pedidos</p>
+                <div className="profile">
+                    {order && 
+                        <p className="letter">
+                            Numero de orden: {order.numOrden}.
+                            <br/>
+                            Tienda: {order.tienda}.
+                            <br/>
+                            <br/>
+                            Picker asignado: {order.piker}.
+                            <br/>
+                            Contacto Picker: {order.celPiker}
+                            <br/>
+                            Transporte: {order.vehiculo}
+                            <br/>
+                            {order.detalles}
+                            <br/>
+                            <br/>
+                            Fecha entrega: {order.entrega}.
+                            <br/>
+                            Lugar de entrega: {order.places}
+                            <br/>
+                            Hora de entrega: {order.hours}
+                            <br/> 
+                        </p>
             
-            }
-            <button to="/tracking"className="mapas" onClick={handleClic}>Rastrear paquete</button>
+                    }
+                    <button to="/tracking"className="mapas" onClick={handleClic}>Rastrear paquete</button>
 
-            <Link to="/newPicker" className="profileLink">Cambiar Picker</Link>
-            </div>
+                    <Link to="/newPicker" className="profileLink">Cambiar Picker</Link>
+                </div>
             
             </div>
         

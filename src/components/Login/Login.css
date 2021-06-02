@@ -27,7 +27,6 @@
     margin-top: 26px;
     background-color: #FFF3F6;
     width: 88%;
-    /* height: 335px; */
     outline: solid 5px #142032;
     display: flex;
     flex-direction: column;
@@ -37,12 +36,10 @@
 }
 .loginForm{
     width: 84%;
-    /* height: 231px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-    
 }
 .loginForm label{
     width: 85%;

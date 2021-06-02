@@ -3,8 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruckPickup } from '@fortawesome/free-solid-svg-icons'
 import { faMale } from '@fortawesome/free-solid-svg-icons'
-
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;  
+ 
 const myLatLng = {lat: 19.429102, lng: -99.132366};
 class ViewMaps extends Component {
   static defaultProps = {

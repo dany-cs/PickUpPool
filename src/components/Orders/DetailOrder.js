@@ -6,8 +6,6 @@ import swal from 'sweetalert';
 import arrow from '../../assets/back.png';
 import { db } from '../../firebase';
 
-
-
 const DetailOrder =()=>{
 
     let history = useHistory();

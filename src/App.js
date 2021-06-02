@@ -17,8 +17,6 @@ import OrderTracking from './components/OrderTracking/OrderTracking';
 import { UserQualification } from './components/Qualification/UserQualification';
 import { UserProfile } from './components/Profile/UserProfile';
 
-
-
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
   useEffect(() => { //Estado del servidor

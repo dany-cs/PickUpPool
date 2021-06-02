@@ -5,9 +5,7 @@ import { useHistory } from 'react-router-dom'
 
 function Deliveries() {
     const [createN, setCreate] = useState([]);
-     let history = useHistory();
-
-    
+    let history = useHistory();
 
     useEffect(() => {
         const getNotes = async () => {
@@ -27,7 +25,7 @@ function Deliveries() {
 
     return (
         <>
-             <div className="deliveriesDad">
+            <div className="deliveriesDad">
             {
                 createN.length !== 0 ? (
                     createN.map((item) => (
