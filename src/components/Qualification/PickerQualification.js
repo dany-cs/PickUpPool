@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import Stars from '../Qualification/Starts'
 import { useHistory } from 'react-router-dom'
 import arrow from '../../assets/back.png';
+import swal from 'sweetalert';
 
 const PickerQualification =()=>{
     let history = useHistory();
@@ -10,6 +11,13 @@ const PickerQualification =()=>{
     function handleClick() {
         history.push('/principal');
     }
+
+    function handleQualify() {
+        swal('¡Gracias!', 'Tu calificación ha sido enviada', 'success');
+        history.push('/principal');
+    }
+
+
 
     return(
         <>
@@ -31,7 +39,7 @@ const PickerQualification =()=>{
                         <Stars/>
                     </div>
                     <div>
-                        <button className='confirm-review' onClick={handleClick}>Enviar calificación</button>
+                        <button className='confirm-review' onClick={handleQualify}>Enviar calificación</button>
                     </div>
                 </div>
             </div>

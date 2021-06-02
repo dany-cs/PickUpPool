@@ -35,8 +35,7 @@ function Deliveries() {
                             <p>Usuario: {item.cliente}</p>
                             <p>Telefono: {item.telefono}</p>
                             <p>Fecha de entrega {item.entrega}</p>
-                            <p>Ubicación: {item.ubicación}</p>
-                            <button  onClick={(id)=>{goToOrderDetail(item.id)}}>detalles</button>
+                            <button  className="btnDeliveries" onClick={(id)=>{goToOrderDetail(item.id)}}>Ver entrega</button>
                         </li>
                             
                     ))

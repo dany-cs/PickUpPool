@@ -8,7 +8,7 @@ export const FormNewPicker = () =>{
     let history = useHistory();
 
     function handleClick() {
-        history.push('/pickerProfile');
+        history.push('/orders');
     }
     function handleClic() {
         history.push('/tracking');

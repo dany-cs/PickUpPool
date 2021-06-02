@@ -16,6 +16,7 @@ import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 import OrderTracking from './components/OrderTracking/OrderTracking';
 import { UserQualification } from './components/Qualification/UserQualification';
 import { UserProfile } from './components/Profile/UserProfile';
+import PickerTracking from './components/OrderTracking/PickerTracking';
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -76,6 +77,9 @@ function App() {
           </Route>
           <Route path='/userqualify'>
             <UserQualification />
+          </Route>
+          <Route path='/pickertracking'>
+            <PickerTracking />
           </Route>
         </Switch>
       </div>

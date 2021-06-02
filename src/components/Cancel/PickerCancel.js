@@ -11,7 +11,7 @@ export const PickerCancel = () =>{
     let history = useHistory();
 
     function handleClick() {
-        history.push('/userProfile');
+        history.push('/deliveries');
     }
 
     const[commit, setCommit] = useState('');
@@ -23,7 +23,7 @@ export const PickerCancel = () =>{
             await db.collection('pickerCancelation').add(newCancelation);
             console.log('Comentario de cancelación exitoso');
             swal('¡Gracias!','Se ha cancelado exitosamente', 'success');
-            history.push('/principal');
+            history.push('/deliveries');
         }
         catch(error){
             console.log('No exitoso', error)

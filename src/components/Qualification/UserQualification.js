@@ -25,7 +25,7 @@ export const UserQualification = () =>{
         try{
             await db.collection('qualificationUser').add(qualificationUser);
             swal('¡Gracias!','Tus comentarios han sido enviados exitosamente', 'success');
-            history.push('/principal');
+            history.push('/deliveries');
             console.log('Comentarios guardados');
         }
         catch(error){
