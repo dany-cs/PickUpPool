@@ -43,7 +43,6 @@
     color: #142032;
 }
 .loginInput{
-    background-color: #FFF3F6;
     height: 23px;
     width: 85%;
     margin: 8px;
@@ -51,15 +50,13 @@
     border: solid 1px #717786;
 }
 .loginButton{
-    background-color: #F71963;
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
     color: white;
-    outline: none;
-    width: 42%;
-    height: 43px;
-    border-radius: 15px 15px;
-    font-size: larger;
-    text-align: center;
-    margin-top: 14px;
+    font-family: 'Mitr', sans-serif;
+    margin: 20px;
 }
 .loginDivForm p{
     margin-top: 6px;

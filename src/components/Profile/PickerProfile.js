@@ -9,7 +9,7 @@ export const PickerProfile = () =>{
     let history = useHistory();
 
     function handleClick() {
-        history.push('/details');
+        history.push('/principal');
     }
     return (
         <>
