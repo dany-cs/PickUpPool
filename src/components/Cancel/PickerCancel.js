@@ -4,6 +4,7 @@ import './PickerCancel.css'
 import Navbar from '../Navbar/Navbar'
 import arrow from '../../assets/back.png';
 import { useHistory } from 'react-router-dom'
+import swal from 'sweetalert';
 
 export const PickerCancel = () =>{
     
@@ -13,13 +14,6 @@ export const PickerCancel = () =>{
         history.push('/userProfile');
     }
 
-    let history = useHistory();
-
-    function handleClick() {
-        history.push('/userProfile');
-    }
-
-
     const[commit, setCommit] = useState('');
     const commitCancelation = async (e) =>{
         const newCancelation = {
@@ -28,6 +22,7 @@ export const PickerCancel = () =>{
         try{
             await db.collection('pickerCancelation').add(newCancelation);
             console.log('Comentario de cancelación exitoso');
+            swal('¡Gracias!','Se ha cancelado exitosamente', 'success');
             history.push('/principal');
         }
         catch(error){

@@ -5,12 +5,8 @@ import { useHistory } from 'react-router-dom'
 
 function OneOrder() {
     const [createN, setCreate] = useState([]);
-    // const [selectedOrder, setSelectedOrder] = useState(null);
-    let history = useHistory();
 
-    // function handleClick() {
-    //     history.push('/details');
-    // }
+    let history = useHistory();
     
     useEffect(() => {
         const getOrders = async () => {

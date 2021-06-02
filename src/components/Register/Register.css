@@ -7,11 +7,9 @@
     align-items: center;
     color: #142032;
 }
-
 h1{
     margin-bottom: 5px;
 }
-
 .register p{
     font-weight: bold;
     margin-top: -18px;
@@ -58,11 +56,9 @@ h1{
     font-family: 'Mitr', sans-serif;
     margin-bottom: 30px;
 }
-
 .arrowBack{
     width: 30px;
     margin: 0 15px;
     position: absolute;
     left: 7.22%;
-    /* right: 84.44%; */
 }

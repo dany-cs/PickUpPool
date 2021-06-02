@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import './UserQualification.css';
 import { db } from '../../firebase';
 import success from '../../assets/success.png'
+import swal from 'sweetalert';
 
 export const UserQualification = () =>{
 
@@ -23,7 +24,7 @@ export const UserQualification = () =>{
         };
         try{
             await db.collection('qualificationUser').add(qualificationUser);
-            // swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
+            swal('¡Gracias!','Tus comentarios han sido enviados exitosamente', 'success');
             history.push('/principal');
             console.log('Comentarios guardados');
         }
@@ -40,7 +41,6 @@ export const UserQualification = () =>{
             <img className="success" src={success} alt="pedido entregado" />
             <p>Califica tu entrega: </p>
             <div className="qualificationContainer">
-                {/* <form className="container-cancel" > */}
                     <div className="selects">
                         <select value={llegada} onChange={(e) => {setLlegada(e.target.value)}} required className="buttonUserQualification">
                             <option></option>
@@ -53,7 +53,6 @@ export const UserQualification = () =>{
                             <option name="grosero">Fue grosero</option>
                         </select>
                     </div>
-                {/* </form> */}
 
                 <div className="commitsQualification">
                     <p>Comentarios:</p>
