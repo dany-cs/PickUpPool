@@ -45,7 +45,7 @@ function OneOrder() {
                         <li className="ordersBoy" key={item.id}>
                             <p>Id: {item.numOrden}</p>
                             <p>Fecha de entrega: {item.entrega}</p>
-                            <button  onClick={(id)=>{orderId(item.id)}}>detalles</button>
+                            <button  className='btn-details' onClick={(id)=>{orderId(item.id)}}>Programar entrega</button>
                         </li>     
                     ))
                     ) : (

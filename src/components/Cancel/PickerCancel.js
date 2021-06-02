@@ -26,12 +26,6 @@ export const PickerCancel = () =>{
         }
     };
 
-    let history = useHistory();
-
-    function handleClick() {
-        history.push('/orders');
-    }
-
     return(
         <>
             <Navbar />

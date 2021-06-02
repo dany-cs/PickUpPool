@@ -15,12 +15,18 @@
     box-sizing: border-box;
     border-radius: 5px;
 }
-/* 
-.my-orders h2{
-    margin: 0px 0px;
+
+.titleTraking{
+    font-size: large;
+    margin-bottom: 5px;
 }
 
-.container {
-    width: 300px;
-    height: 466px;
-} */
+.btnTraking{
+    background: #F71963;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Mitr', sans-serif;
+    margin: 8px;
+}

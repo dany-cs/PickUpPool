@@ -20,7 +20,7 @@ function OrderTracking() {
             <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className='conteiner-orderTracking'>
                 <div className="tracking">
-                    <h2>Rastreo de Pedidos</h2>
+                    <p className='titleTraking'>Rastreo de Pedidos</p>
                 </div>
                 <section>
                     <div className="conteiner-map">
@@ -28,7 +28,7 @@ function OrderTracking() {
                     </div>
                 </section>
             </div>
-            <button onClick={handleClic}>Paquete recibido</button>
+            <button className='btnTraking' onClick={handleClic}>Paquete recibido</button>
         </>
     );
 }

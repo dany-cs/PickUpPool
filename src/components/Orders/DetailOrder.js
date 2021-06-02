@@ -31,7 +31,7 @@ const DetailOrder =()=>{
             history.push({
                 pathname: `/pickerProfile`,
                 search: `?id=${id}`
-              });
+                });
             console.log('Programando entrega');
         }
         catch(error){
@@ -49,7 +49,6 @@ const DetailOrder =()=>{
             <div className='conteiner-userorders'>
                 <div className="my-orders">
                     <p>Mis pedidos</p>
-                    
                 </div>
                 <section> 
                     <form className="container-orders" onSubmit={scheduleOrder}>
