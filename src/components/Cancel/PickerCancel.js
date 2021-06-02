@@ -13,6 +13,13 @@ export const PickerCancel = () =>{
         history.push('/userProfile');
     }
 
+    let history = useHistory();
+
+    function handleClick() {
+        history.push('/userProfile');
+    }
+
+
     const[commit, setCommit] = useState('');
     const commitCancelation = async (e) =>{
         const newCancelation = {
@@ -36,9 +43,9 @@ export const PickerCancel = () =>{
                 <p className="titleCancel">¿Por qué estás cancelando la entrega?</p>
                 <div className="buttonCancel">
                     <div className="prueba">
-                        <button className="firstButton">La tienda no lo tiene en existencia</button>
-                        <button className="secondButton">No se actualizaron los datos del nuevo picker</button>
-                        <button className="thirdButton">Otro</button>
+                        <button className="firstButton btnhoover">La tienda no lo tiene en existencia</button>
+                        <button className="secondButton btnhoover">No se actualizaron los datos del nuevo picker</button>
+                        <button className="thirdButton btnhoover">Otro</button>
                         <p>Comentario:</p>
                         <textarea type="text" value={commit} onChange={(e) => { setCommit(e.target.value)}} placeholder="Coloca tus comentarios aquí....."></textarea>
                         <button className="enviar" onClick={commitCancelation}>Enviar Cancelación</button>

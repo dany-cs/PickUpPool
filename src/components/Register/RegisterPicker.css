@@ -7,8 +7,9 @@
     align-items: center;
     color: #142032;
 }
-h1{
+.titlePicker{
     margin-bottom: 5px;
+    width: 60%;
 }
 .registerPick p{
     font-weight: bold;
@@ -18,7 +19,7 @@ h1{
     margin-top: 26px;
     background-color: #FFF3F6;
     width: 88%;
-    height: 469px;
+    height: 450px;
     outline: solid 5px #142032;
     display: flex;
     flex-direction: column;
@@ -41,8 +42,8 @@ h1{
     margin-bottom: 7px;
 }
 .registerPickerInput{
-    background-color: #FFF3F6;
-    height: 25px;
+    background-color:  white;
+    height: 23px;
     width: 85%;
     margin-bottom: 26px;
     border-radius: 6px 6px;
@@ -55,7 +56,7 @@ h1{
     font-size: 16px;
     color: white;
     font-family: 'Mitr', sans-serif;
-    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .radioButtom{
     display: flex;
@@ -67,4 +68,11 @@ h1{
 }
 .radioButtomTwo{
     width: 100%;
+}
+.returnR{
+    width: 40px;
+    margin: 15px;
+    left: 1%;
+    position: absolute;
+    top: 590px;
 }
